@@ -39,16 +39,16 @@ public class RobotMap {
 
     public static final XboxController controller = new XboxController(1);
 
-    public static final Button buttonA = new JoystickButton(controller, 1);
-    public static final Button buttonB = new JoystickButton(controller, 2);
-    public static final Button buttonX = new JoystickButton(controller, 3);
-    public static final Button buttonY = new JoystickButton(controller, 4);
-    public static final Button leftBumper = new JoystickButton(controller, 5);
-    public static final Button rightBumper = new JoystickButton(controller, 6);
-    public static final Button stop = new JoystickButton(controller, 7);
-    public static final Button start = new JoystickButton(controller, 8);
-    public static final Button leftJoystickButton = new JoystickButton(controller, 9);
-    public static final Button rightJoystickButton = new JoystickButton(controller, 10);
+    public final Button buttonA = new JoystickButton(controller, 1);
+    public final Button buttonB = new JoystickButton(controller, 2);
+    public final Button buttonX = new JoystickButton(controller, 3);
+    public final Button buttonY = new JoystickButton(controller, 4);
+    public final Button leftBumper = new JoystickButton(controller, 5);
+    public final Button rightBumper = new JoystickButton(controller, 6);
+    public final Button stop = new JoystickButton(controller, 7);
+    public final Button start = new JoystickButton(controller, 8);
+    public final Button leftJoystickButton = new JoystickButton(controller, 9);
+    public final Button rightJoystickButton = new JoystickButton(controller, 10);
 
     public double deadzone(double input) {
         if(Math.abs(input) <= 0.2) {
