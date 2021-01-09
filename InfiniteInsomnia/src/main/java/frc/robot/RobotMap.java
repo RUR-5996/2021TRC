@@ -1,6 +1,5 @@
 package frc.robot;
 
-import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
@@ -8,6 +7,7 @@ import edu.wpi.first.wpilibj.drive.MecanumDrive;
 import edu.wpi.first.wpilibj.AnalogInput;
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.GenericHID;
+import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
 
 public class RobotMap {
@@ -30,10 +30,10 @@ public class RobotMap {
 
     public static AnalogInput ultrasonic = new AnalogInput(0);
 
-    public static Talon frontLeft = new Talon(0);
-    public static Talon frontRight = new Talon(1);
-    public static Talon rearLeft = new Talon(2);
-    public static Talon rearRight = new Talon(3);
+    public static WPI_VictorSPX frontLeft = new WPI_VictorSPX(0);
+    public static WPI_VictorSPX frontRight = new WPI_VictorSPX(1);
+    public static WPI_VictorSPX rearLeft = new WPI_VictorSPX(2);
+    public static WPI_VictorSPX rearRight = new WPI_VictorSPX(3);
 
     public MecanumDrive drive = new MecanumDrive(frontLeft, rearLeft, frontRight, rearRight);
 
