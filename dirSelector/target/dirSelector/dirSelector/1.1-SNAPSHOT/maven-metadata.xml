@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>dirSelector</groupId>
+  <artifactId>dirSelector</artifactId>
+  <version>1.1-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20210114.205129</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20210114205129</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>1.1-20210114.205129-1</value>
+        <updated>20210114205129</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.1-20210114.205129-1</value>
+        <updated>20210114205129</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>

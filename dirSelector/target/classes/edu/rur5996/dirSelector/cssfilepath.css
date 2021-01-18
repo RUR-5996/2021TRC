@@ -1,0 +1,14 @@
+#_thePane {
+    -fx-background-image: url(bg.jpg);
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100% 100%; 
+}
+#_selected {
+    -fx-text-fill: black;
+    -fx-font: 20px "monospace";
+}
+.radio-button .radio {
+    -fx-scale-x:5;
+    -fx-scale-y:5;
+
+}

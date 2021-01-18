@@ -1,0 +1,1 @@
+deploy -DaltDeploymentRepository=snapshot-repo::default::file:C:\Users\vojta\Desktop\programovani\dirSelector\target

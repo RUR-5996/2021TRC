@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.TextField?>
+<?import java.lang.Double?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.rur5996.dirSelector.DirSelectorWidget" 
+fx:id="_thePane" stylesheets="@cssfilepath.css" minWidth="200" minHeight="100">
+
+<fx:define>
+    <ToggleGroup fx:id = "_imageTG"/>
+    <Double fx:id="gearX" fx:value="70"/>
+    <Double fx:id="gearY" fx:value="40"/>
+    <Double fx:id="ballsX" fx:value="25"/>
+    <Double fx:id="ballsY" fx:value="40"/>
+</fx:define>
+
+<children>
+    <TextField fx:id="_selected" layoutX="15" layoutY="75"/>
+
+    <RadioButton fx:id="Gear" ToggleGroup="$_imageTG" layoutX="$gearX" layoutY="$gearY"/>
+    <RadioButton fx:id="Ball" ToggleGroup="$_imageTG" layoutX="$ballsX" layoutY="$ballsY"/>
+
+</children>
+</AnchorPane>

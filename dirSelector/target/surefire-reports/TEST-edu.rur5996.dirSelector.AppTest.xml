@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="0" name="edu.rur5996.dirSelector.AppTest" time="0.003" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="11.0.4+11"/>
+    <property name="sun.boot.library.path" value="C:\Users\Public\wpilib\2020\jdk\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\vojta\Desktop\programovani\dirSelector"/>
+    <property name="java.vm.vendor" value="AdoptOpenJDK"/>
+    <property name="java.vendor.url" value="https://adoptopenjdk.net/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CZ"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\vojta\Desktop\programovani\dirSelector"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="11.0.4+11"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\vojta\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\Users\vojta\Downloads\apache-maven-3.6.3-bin\apache-maven-3.6.3\bin\..\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1250"/>
+    <property name="java.library.path" value="C:\Users\Public\wpilib\2020\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\Public\wpilib\2020\jdk\bin:C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Users\Public\frc2019\tools\bin;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Users\Public\frc2019\roborio\bin;C:\Users\Public\frc2019\frccode;C:\Program Files\Git\cmd;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\nodejs\;C:\Users\Public\wpilib\2020\frccode;C:\Users\vojta\Downloads\apache-maven-3.6.3-bin\apache-maven-3.6.3\bin;C:\Users\Public\wpilib\2020\roborio\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;%SYSTEMROOT%\System32\OpenSSH\;C:\Users\vojta\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\vojta\AppData\Local\Programs\Python\Python38-32\;C:\Users\vojta\AppData\Local\Microsoft\WindowsApps;C:\Users\Public\frc2019\roborio\bin;C:\Users\Public\frc2019\frccode;C:\Users\vojta\AppData\Local\GitHubDesktop\bin;C:\Users\vojta\AppData\Roaming\npm;C:\Users\vojta\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Public\wpilib\2020\frccode;C:\Users\Public\wpilib\2020\roborio\bin;C:\Program Files (x86)\FAHClient;C:\Users\vojta\AppData\Local\Microsoft\WindowsApps;;."/>
+    <property name="altDeploymentRepository" value="snapshot-repo::default::file:C:\Users\vojta\Desktop\programovani\dirSelector\target"/>
+    <property name="maven.conf" value="C:\Users\vojta\Downloads\apache-maven-3.6.3-bin\apache-maven-3.6.3\bin\../conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:\Users\vojta\Downloads\apache-maven-3.6.3-bin\apache-maven-3.6.3\bin\..\lib\jansi-native"/>
+    <property name="user.home" value="C:\Users\vojta"/>
+    <property name="user.timezone" value="Europe/Prague"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="file.encoding" value="Cp1250"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="user.name" value="vojta"/>
+    <property name="java.class.path" value="C:\Users\vojta\Downloads\apache-maven-3.6.3-bin\apache-maven-3.6.3\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher deploy -DaltDeploymentRepository=snapshot-repo::default::file:C:\Users\vojta\Desktop\programovani\dirSelector\target -f c:\Users\vojta\Desktop\programovani\dirSelector\pom.xml"/>
+    <property name="java.home" value="C:\Users\Public\wpilib\2020\jdk"/>
+    <property name="user.language" value="cs"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="11.0.4"/>
+    <property name="java.vendor" value="AdoptOpenJDK"/>
+    <property name="sun.stderr.encoding" value="cp852"/>
+    <property name="maven.home" value="C:\Users\vojta\Downloads\apache-maven-3.6.3-bin\apache-maven-3.6.3\bin\.."/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2019-07-16"/>
+    <property name="java.vendor.url.bug" value="https://github.com/AdoptOpenJDK/openjdk-build/issues"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="java.vendor.version" value="AdoptOpenJDK"/>
+    <property name="sun.stdout.encoding" value="cp852"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="edu.rur5996.dirSelector.AppTest" name="shouldAnswerWithTrue" time="0.003"/>
+</testsuite>
