@@ -24,8 +24,11 @@ public AutonomousDrive autoDrive = new AutonomousDrive();
    * This function is run when the robot is first started up and should be
    * used for any initialization code.
    */
+  
   @Override
   public void robotInit() {
+    RobotMap.gyro.initGyro();
+    RobotMap.gyro.calibrate();
    
   }
 
