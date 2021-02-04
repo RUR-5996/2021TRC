@@ -27,8 +27,6 @@ public AutonomousDrive autoDrive = new AutonomousDrive();
   
   @Override
   public void robotInit() {
-    RobotMap.gyro.initGyro();
-    RobotMap.gyro.calibrate();
    
   }
 

@@ -8,7 +8,8 @@ import edu.wpi.first.wpilibj.AnalogInput;
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.GenericHID;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
-import edu.wpi.first.wpilibj.AnalogGyro;
+import com.kauailabs.navx.frc.AHRS;
+import edu.wpi.first.wpilibj.SPI;
 
 
 public class RobotMap {
@@ -31,7 +32,7 @@ public class RobotMap {
 
     public static AnalogInput ultrasonic = new AnalogInput(1);
 
-    public static AnalogGyro gyro = new AnalogGyro(0);
+    public static AHRS gyro = new AHRS(SPI.Port.kMXP);
 
     public static WPI_VictorSPX frontLeft = new WPI_VictorSPX(0);
     public static WPI_VictorSPX frontRight = new WPI_VictorSPX(1);
