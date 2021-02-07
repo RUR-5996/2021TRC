@@ -74,6 +74,53 @@ public class AutonomousDrive {
         }
 
     }
+
+    public void autoDriveTwo() {
+        
+        int i = 0;
+        //drive 90cm
+        if ((RobotMap.ultrasonic.getVoltage() / Constants.voltsPerCm) > 90.0 && i == 0)
+        {
+            robotMap.drive.driveCartesian(0, 1.0, 0);
+        }
+
+        //when finished, increase index to 1
+        if (deadzoneDistance(RobotMap.ultrasonic.getVoltage() / Constants.voltsPerCm, 90.0) == 0)
+        {
+            i = 1;
+        }
+
+        //turn 90 degrees, counter-clockwise to face the upper long side of the field
+        if (RobotMap.gyro.getAngle() > -90 && i == 1)
+        {
+            robotMap.drive.driveCartesian(0.0, 0.0, -1.0);
+        }
+
+        //when finished, increase index to 2
+        if (deadzoneAngle(RobotMap.gyro.getAngle(), -90) == 0)
+        {
+            i = 2;
+        }
+
+        //drive until the robot is in front of the flask
+        if ((RobotMap.ultrasonic.getVoltage() / Constants.voltsPerCm) > 175.0 && i == 2)
+        {
+            robotMap.drive.driveCartesian(0.0, 1.0, 0.0);
+        }
+
+        //when finished, increase index to 3
+        if (deadzoneDistance(RobotMap.ultrasonic.getVoltage() / Constants.voltsPerCm, 175.0) == 0)
+        {
+            i = 3;
+        }
+
+        //turn 90 degrees counter-clockwise so that the robot faces the flask 
+        if (RobotMap.gyro.getAngle() > -180 && i == 3)
+        {
+            robotMap.drive.driveCartesian(0.0, 0.0, -1.0);
+        }
+
+    }
 }
 
 
