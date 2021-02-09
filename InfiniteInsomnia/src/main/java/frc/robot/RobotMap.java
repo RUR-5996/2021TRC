@@ -8,17 +8,21 @@ import edu.wpi.first.wpilibj.AnalogInput;
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.GenericHID;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
+import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.kauailabs.navx.frc.AHRS;
 import edu.wpi.first.wpilibj.SPI;
 
 
 public class RobotMap {
 
-    private RobotMap() {
-
-    }
-
     private static RobotMap robotMap;
+
+    private RobotMap() {
+        setupDrive(frontLeft);
+        setupDrive(frontRight);
+        setupDrive(rearLeft);
+        setupDrive(rearRight);
+    }
 
     public static RobotMap getRobotMap() {
         if(robotMap == null) {
@@ -40,6 +44,17 @@ public class RobotMap {
     public static WPI_VictorSPX rearRight = new WPI_VictorSPX(3);
 
     public MecanumDrive drive = new MecanumDrive(frontLeft, rearLeft, frontRight, rearRight);
+
+    private void setupDrive(WPI_VictorSPX driveVictor) {
+        driveVictor.configNominalOutputForward(0, Constants.timeoutMs);
+        driveVictor.configNominalOutputReverse(0, Constants.timeoutMs);
+        driveVictor.configPeakOutputForward(1, Constants.timeoutMs);
+        driveVictor.configPeakOutputReverse(-1, Constants.timeoutMs);
+        driveVictor.configAllowableClosedloopError(0, 0, Constants.timeoutMs);
+        driveVictor.configNeutralDeadband(0.05, Constants.timeoutMs);
+        driveVictor.configOpenloopRamp(0.25);
+        driveVictor.setNeutralMode(NeutralMode.Brake);
+    }
 
     public static final XboxController controller = new XboxController(1);
 

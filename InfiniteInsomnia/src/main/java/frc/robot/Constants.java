@@ -2,6 +2,8 @@ package frc.robot;
 
 public class Constants {
     
+     public static final int timeoutMs = 10;
+     
      //controllers
      public static final int CONTROLLER = 1;
      public static final double DEADZONE = 0.2;
