@@ -7,10 +7,13 @@ import edu.wpi.first.wpilibj.drive.MecanumDrive;
 import edu.wpi.first.wpilibj.AnalogInput;
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.GenericHID;
+
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.kauailabs.navx.frc.AHRS;
 import edu.wpi.first.wpilibj.SPI;
+import edu.wpi.first.wpilibj.Victor;
 
 
 public class RobotMap {
@@ -38,6 +41,7 @@ public class RobotMap {
 
     public static AHRS gyro = new AHRS(SPI.Port.kMXP);
 
+    //drive controllers
     public static WPI_VictorSPX frontLeft = new WPI_VictorSPX(0);
     public static WPI_VictorSPX frontRight = new WPI_VictorSPX(1);
     public static WPI_VictorSPX rearLeft = new WPI_VictorSPX(2);
@@ -55,6 +59,11 @@ public class RobotMap {
         driveVictor.configOpenloopRamp(0.25);
         driveVictor.setNeutralMode(NeutralMode.Brake);
     }
+
+    //intake + shooter
+    public static Victor intakeMotor = new Victor(4);
+    public static Victor wheel = new Victor(5);
+    public static WPI_TalonSRX shooterMotor = new WPI_TalonSRX(6);
 
     public static final XboxController controller = new XboxController(1);
 
