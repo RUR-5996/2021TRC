@@ -23,6 +23,8 @@ public class Constants {
      public static final double scalingFactor = 1024.0;
      public static final double voltsPerCm = suppliedVoltage / scalingFactor;
 
+     //shooter speed
+     public static final double shootSpeed = Robot.shooterSpeed.getDouble(0.8);
 
 
 

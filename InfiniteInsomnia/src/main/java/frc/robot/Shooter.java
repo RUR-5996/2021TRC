@@ -1,22 +1,33 @@
 package frc.robot;
 
+import edu.wpi.first.wpilibj.Timer;
+
 public class Shooter {
     
     private RobotMap robotMap;
+    private Timer timer;
     boolean shoot = false;
     
     public Shooter() 
     {
         robotMap = RobotMap.getRobotMap();
+        timer = new Timer();
+        timer.stop();
+    }
+
+    public void start() {
+        timer.start();
     }
 
     public void shooter() {
-        if(robotMap.rightBumper.get() && shoot == false) {
+        if((robotMap.rightBumper.get()) && (shoot == false) && (timer.get() >= 0.2)) {
             shoot = true;
+            timer.reset();
         }
 
-        if (robotMap.rightBumper.get() && shoot == true) {
+        if ((robotMap.rightBumper.get()) && (shoot == true) && (timer.get() >= 0.2)) {
             shoot = false;
+            timer.reset();
         }
 
         if (shoot) {  

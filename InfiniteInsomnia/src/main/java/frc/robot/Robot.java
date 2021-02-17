@@ -8,6 +8,14 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
+
+import java.util.Map;
+
+import edu.wpi.first.networktables.NetworkTableEntry;
+import edu.wpi.first.wpilibj.shuffleboard.BuiltInWidgets;
+import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
+import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
+
 /**
  * The VM is configured to automatically run this class, and to call the
  * functions corresponding to each mode, as described in the TimedRobot
@@ -16,9 +24,14 @@ import edu.wpi.first.wpilibj.TimedRobot;
  * project.
  */
 public class Robot extends TimedRobot {
-  
-public ManualDrive drive = new ManualDrive();
-public AutonomousDrive autoDrive = new AutonomousDrive();
+
+  public ManualDrive drive = new ManualDrive();
+  public AutonomousDrive autoDrive = new AutonomousDrive();
+  public Intake intake = new Intake();
+  public Shooter shooter = new Shooter();
+
+  public static ShuffleboardTab shooterTab;
+  public static NetworkTableEntry shooterSpeed;
 
   /**
    * This function is run when the robot is first started up and should be
@@ -27,7 +40,12 @@ public AutonomousDrive autoDrive = new AutonomousDrive();
   
   @Override
   public void robotInit() {
-   
+    intake.start();
+    shooter.start();
+
+    shooterTab = Shuffleboard.getTab("Shooter");
+    shooterSpeed = shooterTab.add("Shooter speed", 0.8).withWidget(BuiltInWidgets.kNumberSlider).withProperties(Map.of("min", -1, "max", 1)).getEntry();
+
   }
 
   /**
@@ -71,6 +89,7 @@ public AutonomousDrive autoDrive = new AutonomousDrive();
    */
   @Override
   public void teleopInit() {
+
   }
 
   /**
