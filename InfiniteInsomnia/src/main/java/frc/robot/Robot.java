@@ -40,9 +40,7 @@ public class Robot extends TimedRobot {
   
   @Override
   public void robotInit() {
-    intake.start();
-    shooter.start();
-
+    
     shooterTab = Shuffleboard.getTab("Shooter");
     shooterSpeed = shooterTab.add("Shooter speed", 0.8).withWidget(BuiltInWidgets.kNumberSlider).withProperties(Map.of("min", -1, "max", 1)).getEntry();
 

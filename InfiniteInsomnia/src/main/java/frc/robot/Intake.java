@@ -12,11 +12,6 @@ public class Intake {
     {
         robotMap = RobotMap.getRobotMap();
         timer = new Timer();
-        timer.stop();
-    }
-
-    public void start() {
-        timer.start();
     }
 
     public void intake() {
