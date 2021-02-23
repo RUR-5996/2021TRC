@@ -1,5 +1,7 @@
 package frc.robot;
 
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
 public class Constants {
 
     //controllers
@@ -18,3 +20,11 @@ public class Constants {
 
 }
 
+protected void execute() {
+    SmartDashboard.putNumber("Swerve Angle", drivetrain.getSwerveAngle());
+    SmartDashboard.putNumber("Left Drive Encoder", drivetrain.getLeftEncoder());
+    SmartDashboard.putNumber("Right Drive Encoder", drivetrain.getRightEncoder());
+    SmartDashboard.putNumber("RPM", shooter.getRPM());
+    SmartDashboard.putNumber("Distance in CM", ultrasonic.getDistanceCM());
+    SmartDashboard.putNumber("Gyro angle", rotate.getAngle());
+}
