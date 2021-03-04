@@ -26,7 +26,7 @@ public class Constants {
 
 protected void execute() {
     SmartDashboard.putNumber("Left Drive Encoder", LeftJoystickButton.getLeftEncoder());
-    SmartDashboard.putNumber("Right Drive Encoder", RightJoystickButton.getRightEncoder ());
+    SmartDashboard.putNumber("Right Drive Encoder", RightJoystickButton.getRightEncoder());
     SmartDashboard.putNumber("Distance in CM", ultrasonic.getDistanceCM());
     SmartDashboard.putNumber("Gyro angle", gyro.getAngle());
 }
