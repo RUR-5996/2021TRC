@@ -22,9 +22,13 @@ public class Constants {
      public static final double suppliedVoltage = 5.0;
      public static final double scalingFactor = 1024.0;
      public static final double voltsPerCm = suppliedVoltage / scalingFactor;
+}
 
-
-
-
-
+protected void execute() {
+    SmartDashboard.putNumber("Swerve Angle", drivetrain.getSwerveAngle());
+    SmartDashboard.putNumber("Left Drive Encoder", drivetrain.getLeftJoystickButton());
+    SmartDashboard.putNumber("Right Drive Encoder", drivetrain.gtRightJoystickButton ());
+    SmartDashboard.putNumber("RPM", shooter.getRPM());
+    SmartDashboard.putNumber("Distance in CM", ultrasonic.getDistanceCM());
+    SmartDashboard.putNumber("Gyro angle", gyro.getAngle());
 }
