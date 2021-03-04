@@ -15,6 +15,7 @@ import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.shuffleboard.BuiltInWidgets;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -32,6 +33,8 @@ public class Robot extends TimedRobot {
 
   public static ShuffleboardTab shooterTab;
   public static NetworkTableEntry shooterSpeed;
+
+  private RobotMap robotMap = RobotMap.getRobotMap();
 
   /**
    * This function is run when the robot is first started up and should be
@@ -56,6 +59,13 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotPeriodic() {
+
+    SmartDashboard.putNumber("Left Joystick Y-coordinate", robotMap.getLeftY());
+    SmartDashboard.putNumber("Left Joystick X-coordinate", robotMap.getLeftX());
+    SmartDashboard.putNumber("Right Joystick Y-coordinate", robotMap.getRightY());
+    SmartDashboard.putNumber("Right Joystick X-coordinate", robotMap.getRightX());
+    SmartDashboard.putNumber("Ultrasonic distance", (RobotMap.ultrasonic.getVoltage() / Constants.voltsPerCm));
+    SmartDashboard.putNumber("Gyro angle", RobotMap.gyro.getAngle());
   }
 
   /**
