@@ -25,10 +25,8 @@ public class Constants {
 }
 
 protected void execute() {
-    SmartDashboard.putNumber("Swerve Angle", drivetrain.getSwerveAngle());
-    SmartDashboard.putNumber("Left Drive Encoder", drivetrain.getLeftJoystickButton());
-    SmartDashboard.putNumber("Right Drive Encoder", drivetrain.getRightJoystickButton ());
-    SmartDashboard.putNumber("RPM", shooter.getRPM());
+    SmartDashboard.putNumber("Left Drive Encoder", LeftJoystickButton.getLeftEncoder());
+    SmartDashboard.putNumber("Right Drive Encoder", RightJoystickButton.getRightEncoder ());
     SmartDashboard.putNumber("Distance in CM", ultrasonic.getDistanceCM());
     SmartDashboard.putNumber("Gyro angle", gyro.getAngle());
 }
