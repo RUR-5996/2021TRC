@@ -17,6 +17,7 @@ public class Drive {
     //it's a mess for now, we will take a look at how to make this a little cleaner. Also all button mapping is random to serve as an exapmle.
     public void drive(String dir) {
         if(robotMap.leftOne.get() && buttonTimer.get() >= 0.25) {
+            buttonTimer.reset();
             if(type.equals("manual")) { 
                 type = "assisted"; 
                 Robot.llturnPID.setTarget(0); //whenever we want to start turning the robot automatically, we set the Target to 0 (the robot will be facing directly the target every time the automatic turning is enabled).
