@@ -64,7 +64,7 @@ public class Robot extends TimedRobot {
     SmartDashboard.putNumber("Left Joystick X-coordinate", robotMap.getLeftX());
     SmartDashboard.putNumber("Right Joystick Y-coordinate", robotMap.getRightY());
     SmartDashboard.putNumber("Right Joystick X-coordinate", robotMap.getRightX());
-    SmartDashboard.putNumber("Ultrasonic distance", (RobotMap.ultrasonic.getVoltage() / Constants.voltsPerCm));
+    SmartDashboard.putNumber("Ultrasonic distance", (Constants.ultrasonicDistance));
     SmartDashboard.putNumber("Gyro angle", RobotMap.gyro.getAngle());
   }
 

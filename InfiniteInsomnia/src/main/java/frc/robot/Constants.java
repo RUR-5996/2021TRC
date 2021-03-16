@@ -22,9 +22,24 @@ public class Constants {
      public static final double suppliedVoltage = 5.0;
      public static final double scalingFactor = 1024.0;
      public static final double voltsPerCm = suppliedVoltage / scalingFactor;
+     public static double ultrasonicDistance = RobotMap.ultrasonic.getVoltage() / voltsPerCm;
 
      //shooter speed
      public static final double shootSpeed = Robot.shooterSpeed.getDouble(0.8);
+
+     //ultrasonic PID
+     public static final double usP = 0.0;
+     public static final double usI = 0.0;
+     public static final double usD = 0.0;
+
+     //limelight PID
+     public static final double llP = 0.0;
+     public static final double llI = 0.0;
+     public static final double llD = 0.0;
+     public static final double llTurnSpeed = 0.8;
+
+     public static double tx, ty, ta, tv;
+
 
 
 
