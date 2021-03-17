@@ -27,7 +27,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 public class Robot extends TimedRobot {
 
   public ManualDrive drive = new ManualDrive();
-  public AutonomousDrive autoDrive = new AutonomousDrive();
+  public Autonomous auto = new Autonomous();
   public Intake intake = new Intake();
   public Shooter shooter = new Shooter();
 
@@ -64,7 +64,7 @@ public class Robot extends TimedRobot {
     SmartDashboard.putNumber("Left Joystick X-coordinate", robotMap.getLeftX());
     SmartDashboard.putNumber("Right Joystick Y-coordinate", robotMap.getRightY());
     SmartDashboard.putNumber("Right Joystick X-coordinate", robotMap.getRightX());
-    SmartDashboard.putNumber("Ultrasonic distance", (Constants.ultrasonicDistance));
+    SmartDashboard.putNumber("Ultrasonic distance", (Constants.ultrasonicFrontDistance));
     SmartDashboard.putNumber("Gyro angle", RobotMap.gyro.getAngle());
   }
 
@@ -81,7 +81,7 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void autonomousInit() {
-    autoDrive.autoStart();
+    auto.autoStart();
   }
 
   /**
@@ -89,7 +89,7 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void autonomousPeriodic() {
-    autoDrive.autoDrive();
+    auto.autoDrive();
   }
 
   /**

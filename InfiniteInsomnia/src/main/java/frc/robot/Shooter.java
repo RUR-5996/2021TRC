@@ -6,7 +6,7 @@ public class Shooter {
     
     private RobotMap robotMap;
     private Timer timer;
-    boolean shoot = false;
+    public static boolean shoot = false;
     
     public Shooter() 
     {
@@ -33,5 +33,12 @@ public class Shooter {
             RobotMap.shooterMotor.set(0);
         }
     }
+
+    //shoot in autonomous without pressing button, need to figure out how to stop
+    public void shootAuto() {
+        RobotMap.wheel.set(0.8);
+        RobotMap.shooterMotor.set(0.8);
+    }
+
 
 }

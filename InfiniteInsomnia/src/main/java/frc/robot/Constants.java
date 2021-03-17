@@ -22,7 +22,8 @@ public class Constants {
      public static final double suppliedVoltage = 5.0;
      public static final double scalingFactor = 1024.0;
      public static final double voltsPerCm = suppliedVoltage / scalingFactor;
-     public static double ultrasonicDistance = RobotMap.ultrasonic.getVoltage() / voltsPerCm;
+     public static double ultrasonicFrontDistance = RobotMap.ultrasonicFront.getVoltage() / voltsPerCm;
+     public static double ultrasonicSideDistance = RobotMap.ultrasonicSide.getVoltage() / voltsPerCm;
 
      //shooter speed
      public static final double shootSpeed = Robot.shooterSpeed.getDouble(0.8);

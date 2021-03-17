@@ -37,7 +37,8 @@ public class RobotMap {
 
     public static DigitalInput button = new DigitalInput(0);
 
-    public static AnalogInput ultrasonic = new AnalogInput(1);
+    public static AnalogInput ultrasonicFront = new AnalogInput(1);
+    public static AnalogInput ultrasonicSide = new AnalogInput(2);
 
     public static AHRS gyro = new AHRS(SPI.Port.kMXP);
 
