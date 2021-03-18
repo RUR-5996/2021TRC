@@ -18,6 +18,7 @@ public class Autonomous {
         ultrasonicFront = new UltrasonicFrontPID();
         ultrasonicSide = new UltrasonicSidePID();
         limelightMode = new Limelight();
+        limelight = new LimelightPID();
         shooter = new Shooter();
     }
 
@@ -44,7 +45,7 @@ public class Autonomous {
 
         int i = 0;
         //drive approximately to the middle of the field
-        if ((Constants.ultrasonicFrontDistance) > 250.0 && i == 0)
+        if ((Constants.ultrasonicFrontDistance) != 250.0 && i == 0)
         {
             ultrasonicFront.setTarget(250);
             robotMap.drive.driveCartesian(0, ultrasonicFront.pidGet(), 0);
@@ -57,7 +58,7 @@ public class Autonomous {
         }
 
         //drive until the robot is 90 cm from the flask
-        if (Constants.ultrasonicFrontDistance > 90.0 && i == 1)
+        if (Constants.ultrasonicFrontDistance != 90.0 && i == 1)
         {
             ultrasonicFront.setTarget(90);
             ultrasonicSide.setTarget(170);

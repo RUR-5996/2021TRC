@@ -9,7 +9,7 @@ public class UltrasonicSidePID {
     PIDController ultrasonicController;
     double setpoint;
 
-    public void ultrasonicPID() {
+    public UltrasonicSidePID() {
         ultrasonicController = new PIDController(Constants.usP, Constants.usI, Constants.usD);
         ultrasonicController.setTolerance(1); 
     }
@@ -19,6 +19,6 @@ public class UltrasonicSidePID {
     }
 
     public double pidGet() {
-        return MathUtil.clamp(ultrasonicController.calculate(Constants.ultrasonicSideDistance, setpoint), 0, 1);
+        return MathUtil.clamp(ultrasonicController.calculate(Constants.ultrasonicSideDistance, setpoint), -1, 1);
     }
 }
