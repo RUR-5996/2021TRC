@@ -10,7 +10,7 @@ public class Limelight {
     RobotMap robotMap;
     NetworkTable table;
     NetworkTableEntry tv, tx, ty, ta;
-    int pipeline = 1; //pipeline 0 - vision processing, pipeline 1 - driver pipeline
+    public static int pipeline = 1; //pipeline 0 - vision processing, pipeline 1 - driver pipeline
     Timer timer;
 
     public Limelight() {

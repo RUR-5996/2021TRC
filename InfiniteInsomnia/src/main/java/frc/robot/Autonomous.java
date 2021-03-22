@@ -25,7 +25,7 @@ public class Autonomous {
     public void autoStart() {
     }
 
-    public double deadzoneDistance(double input, double aim) {
+    public static double deadzoneDistance(double input, double aim) {
         if(Math.abs(input - aim) <= 5.0) {
             return 0;
         } else {
@@ -33,7 +33,7 @@ public class Autonomous {
         }
     }
 
-    public double deadzoneLimelight(double input, double aim) {
+    public static double deadzoneLimelight(double input, double aim) {
         if(Math.abs(input - aim) <= 1.0) {
             return 0;
         } else {
@@ -96,41 +96,49 @@ public class Autonomous {
 
     public void autoDriveTwo() {
         
-        /** will deal with the second variation later
-        
         int i = 0;
-        //drive 90cm
-        if ((Constants.ultrasonicFrontDistance) > 90.0 && i == 0)
+        //drive 50cm
+        if ((Constants.ultrasonicFrontDistance) != 50.0 && i == 0)
         {
-            ultrasonicFront.setTarget(90);
+            ultrasonicFront.setTarget(50);
             robotMap.drive.driveCartesian(0, ultrasonicFront.pidGet(), 0);
         }
-
         //when finished, increase index to 1
-        if (deadzoneDistance(Constants.ultrasonicFrontDistance, 90.0) == 0)
+        if (deadzoneDistance(Constants.ultrasonicFrontDistance, 50.0) == 0)
         {
             i = 1;
         }
-
         //drive until the robot is in front of the flask
-        if ((Constants.ultrasonicDistance) > 175.0 && i == 2)
+        if ((Constants.ultrasonicSideDistance) != 175.0 && i == 1)
         {
-            robotMap.drive.driveCartesian(0.0, 1.0, 0.0);
+            ultrasonicSide.setTarget(175);
+            robotMap.drive.driveCartesian(ultrasonicSide.pidGet(), 0.0, 0.0);
         }
-
-        //when finished, increase index to 3
-        if (deadzoneDistance(Constants.ultrasonicDistance, 175.0) == 0)
+        //when finished, increase index to 2
+        if (deadzoneDistance(Constants.ultrasonicFrontDistance, 50.0) == 0)
         {
-            i = 3;
+            i = 2;
         }
-
-        //turn 90 degrees counter-clockwise so that the robot faces the flask 
-        if (RobotMap.gyro.getAngle() > -180 && i == 3)
+        if (i == 2)
         {
-            robotMap.drive.driveCartesian(0.0, 0.0, -1.0);
+            //change pipeline to vision processing
+            limelightMode.changeModeAuto();
+            //spin if target was not found
+            if (Constants.tv == 0)               
+            {
+                robotMap.drive.driveCartesian(0, 0, 0.5);
+            }
+            else
+            {
+                limelight.setTarget(0);
+                robotMap.drive.driveCartesian(0, 0, limelight.pidGet());
+            }
+            //need to figure out how to stop the shooter once finished
+            if (deadzoneLimelight(Constants.tx, 0) == 0 && Constants.tv == 1)
+            {
+                shooter.shootAuto(); 
+            }
         }
-        */
-
     }
 }
 
