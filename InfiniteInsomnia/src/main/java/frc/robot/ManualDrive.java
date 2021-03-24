@@ -7,11 +7,13 @@ public class ManualDrive {
     private RobotMap robotMap;
     private LimelightPID limelight;
     private Shooter shooter;
+    private Limelight limelightMode;
 
     public ManualDrive() {
         robotMap = RobotMap.getRobotMap();
         limelight = new LimelightPID();
         shooter = new Shooter();
+        limelightMode = new Limelight();
     }
 
     public void drive() {
@@ -27,7 +29,7 @@ public class ManualDrive {
         }
 
         //asisted drive using Limelight
-        if (Limelight.pipeline == 0)
+        if (limelightMode.getPipeline() == 0)
         {
             if (Constants.tv == 0)               
             {
@@ -39,7 +41,7 @@ public class ManualDrive {
                 robotMap.drive.driveCartesian(0, 0, limelight.pidGet());
             }
 
-            //need to figure out how to stop
+            //once the target is found and focused, start the shooting sequence automatically
             if (Autonomous.deadzoneLimelight(Constants.tx, 0) == 0 && Constants.tv == 1)
             {
                 shooter.shootAuto(); 

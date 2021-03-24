@@ -36,8 +36,16 @@ public class Shooter {
 
     //shoot in autonomous without pressing button, need to figure out how to stop
     public void shootAuto() {
-        RobotMap.wheel.set(0.8);
-        RobotMap.shooterMotor.set(0.8);
+        timer.reset();
+        if (timer.get() < Constants.shootingTime)
+        {
+            RobotMap.wheel.set(0.8);
+            RobotMap.shooterMotor.set(0.8);
+        }
+        else {
+            RobotMap.wheel.set(0);
+            RobotMap.shooterMotor.set(0);
+        }
     }
 
 

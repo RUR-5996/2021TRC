@@ -25,8 +25,9 @@ public class Constants {
      public static double ultrasonicFrontDistance = RobotMap.ultrasonicFront.getVoltage() / voltsPerCm;
      public static double ultrasonicSideDistance = RobotMap.ultrasonicSide.getVoltage() / voltsPerCm;
 
-     //shooter speed
+     //shooter
      public static final double shootSpeed = Robot.shooterSpeed.getDouble(0.8);
+     public static final double shootingTime = 5.0;
 
      //ultrasonic PID
      public static final double usP = 0.0;

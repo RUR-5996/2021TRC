@@ -97,10 +97,10 @@ public class Autonomous {
     public void autoDriveTwo() {
         
         int i = 0;
-        //drive 50cm
-        if ((Constants.ultrasonicFrontDistance) != 50.0 && i == 0)
+        //drive 50 cm (approx. 450 cm from the opposite side)
+        if ((Constants.ultrasonicFrontDistance) != 450.0 && i == 0)
         {
-            ultrasonicFront.setTarget(50);
+            ultrasonicFront.setTarget(450);
             robotMap.drive.driveCartesian(0, ultrasonicFront.pidGet(), 0);
         }
         //when finished, increase index to 1
