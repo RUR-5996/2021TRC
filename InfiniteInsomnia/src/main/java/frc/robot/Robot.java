@@ -30,6 +30,7 @@ public class Robot extends TimedRobot {
   public Autonomous auto = new Autonomous();
   public Intake intake = new Intake();
   public Shooter shooter = new Shooter();
+  public Limelight limelight = new Limelight();
 
   public static ShuffleboardTab shooterTab;
   public static NetworkTableEntry shooterSpeed;
@@ -66,6 +67,8 @@ public class Robot extends TimedRobot {
     SmartDashboard.putNumber("Right Joystick X-coordinate", robotMap.getRightX());
     SmartDashboard.putNumber("Ultrasonic distance", (Constants.ultrasonicFrontDistance));
     SmartDashboard.putNumber("Gyro angle", RobotMap.gyro.getAngle());
+
+    limelight.limelightPeriodic();;
   }
 
   /**
@@ -81,7 +84,6 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void autonomousInit() {
-    auto.autoStart();
   }
 
   /**
@@ -106,6 +108,7 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     drive.drive();
+    intake.intake();
   }
 
   /**
